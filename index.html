@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="description" content="calendar" />
+    <meta author="franky" content="Calendar" />
+    <!-- link to stylesheet.css -->
+    <link rel="stylesheet" href="./main css/style.css" />
+    <!-- link to google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link to font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/19624eaff7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Calendar</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- header -->
+      <header>
+        <div class="task-manager">TASK MANAGER</div>
+        <form class="search">
+          <label for="search-method" class="search-method"></label>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            autocomplete="off"
+          />
+        </form>
+        <div class="calendar">Calendar</div>
+        <div class="toggler"><i class="fa-solid fa-ellipsis"></i></div>
+      </header>
+      <!-- main body -->
+      <!-- summary information -->
+      <section class="sum-info">
+        <div class="info-container">
+          <img
+            class="avatar"
+            src="./img/avatar.jpg"
+            alt="avatar"
+            width="150"
+            height="150"
+          />
+          <p class="name">Monkey D. Luffy</p>
+          <p class="email">
+            <a href="mailto:monkey@gmail.com" target="_blank"
+              >monkey.d.luffy@gmail.com</a
+            >
+          </p>
+          <i class="fa-solid fa-gear"></i>
+          <i class="fa-solid fa-envelope"></i>
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <!-- task summary -->
+        <div class="sum-tasks">
+          <form class="total-tasks" role="total-task" action="#">
+            <input
+              type="range"
+              id="total-tasks"
+              name="total-tasks"
+              min="1"
+              max="33"
+              step="1"
+              value="12"
+              required
+            />
+            <label for="total-tasks" class="total-tasks">12/69</label>
+          </form>
+
+          <div class="task-completed">
+            <h3>12</h3>
+            <p>
+              <strong>Completed</strong><br />
+              tasks
+            </p>
+          </div>
+          <div class="task-todo">
+            <h3>22</h3>
+            <p>
+              <strong>To do</strong><br />
+              tasks
+            </p>
+          </div>
+          <div class="task-total">
+            <h3>69</h3>
+            <p><strong>Total</strong><br />tasks</p>
+          </div>
+        </div>
+
+        <!-- project information -->
+        <div class="project">
+          <h2>PROJECTS</h2>
+          <ul>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Finance</a></li>
+          </ul>
+        </div>
+        <!-- team-info -->
+        <div class="team-list">
+          <h2>TEAM</h2>
+          <div class="team-list">
+            <div class="member-1">
+              <img
+                src="./img/luffy.jpg"
+                width="50"
+                height="50"
+                alt="luffy-captain"
+              />
+            </div>
+            <div class="member-1">
+              <img src="./img/zoro.png" width="50" height="50" alt="zoro" />
+            </div>
+            <div class="member-1">
+              <img src="./img/sanji.jpg" width="50" height="50" alt="sanji" />
+            </div>
+            <div class="member-1">
+              <img src="./img/nami.jpg" width="50" height="50" alt="nami" />
+            </div>
+            <div class="member-1">
+              <img src="./img/usopp.png" width="50" height="50" alt="usopp" />
+            </div>
+            <div class="member-1">
+              <img src="./img/robin.png" width="50" height="50" alt="robin" />
+            </div>
+            <div class="member-1">
+              <img src="./img/brook.jpg" width="50" height="50" alt="brook" />
+            </div>
+            <div class="member-1">
+              <img
+                src="./img/chopper.jpg"
+                width="50"
+                height="50"
+                alt="chopper"
+              />
+            </div>
+            <div class="member-1">
+              <img src="./img/jinbei.jpg" width="50" height="50" alt="jinbei" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- calendar-container -->
+      <section class="calendar-section">
+        <!-- calendar navigation -->
+        <nav class="nav-calendar">
+          <!-- button-week-month -->
+          <div class="btn__week-month">
+            <button type="button" class="btn btn__week">Week</button>
+            <button type="button" class="btn btn__month">Month</button>
+          </div>
+          <!-- month indicator -->
+          <div class="month">
+            <ul>
+              <li class="btn__prev">&#10094;</li>
+              <li><strong>October</strong><br /></li>
+              <li>2022</li>
+              <li class="btn__next">&#10095;</li>
+            </ul>
+          </div>
+          <div class="btn__weekends">
+            <button type="button" class="btn btn-weekends">Weekends</button>
+          </div>
+          <div class="btn__add-tasks">
+            <button type="button" class="btn btn-add-tasks">Add task</button>
+          </div>
+        </nav>
+        <!-- calendar-content -->
+        <div class="calendar">
+          <ul class="weekdays">
+            <li>Monday</li>
+            <li>Tuesday</li>
+            <li>Wednesday</li>
+            <li>Thursday</li>
+            <li>Friday</li>
+            <li>Saturday</li>
+            <li>Sunday</li>
+          </ul>
+        </div>
+        <div class="days">
+            <!-- week-1st -->
+          <div class="week-1">
+            <div class="monday"><h3>31</h3></div>
+            <div class="tuesday">
+              <h3>1</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="wednesday">
+              <h3>2</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="thursday">
+              <h3>3</h3>
+            </div>
+            <div class="friday">
+              <h3>4</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="saturday">
+              <h3>5</h3>
+            </div>
+            <div class="sunday">
+              <h3>6</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- week-2nd -->
+          <div class="week-2">
+            <div class="monday"><h3>7</h3></div>
+            <div class="tuesday">
+              <h3>8</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="wednesday">
+              <h3>9</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="thursday">
+              <h3>10</h3>
+            </div>
+            <div class="friday">
+              <h3>11</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="saturday">
+              <h3>12</h3>
+            </div>
+            <div class="sunday">
+              <h3>13</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- week-3rd -->
+          <div class="week-3">
+            <div class="monday"><h3>14</h3></div>
+            <div class="tuesday">
+              <h3>15</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="wednesday">
+              <h3>16</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="thursday">
+              <h3>17</h3>
+            </div>
+            <div class="friday">
+              <h3>18</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="saturday">
+              <h3>19</h3>
+            </div>
+            <div class="sunday">
+              <h3>20</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- week-4th -->
+          <div class="week-4">
+            <div class="monday"><h3>21</h3></div>
+            <div class="tuesday">
+              <h3>22</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="wednesday">
+              <h3>23</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="thursday">
+              <h3>24</h3>
+            </div>
+            <div class="friday">
+              <h3>25</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="saturday">
+              <h3>26</h3>
+            </div>
+            <div class="sunday">
+              <h3>27</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- week-5th -->
+          <div class="week-5">
+            <div class="monday"><h3>28</h3></div>
+            <div class="tuesday">
+              <h3>29</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="wednesday">
+              <h3>30</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="thursday">
+              <h3>31</h3>
+            </div>
+            <div class="friday">
+              <h3>1</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+            <div class="saturday">
+              <h3>2</h3>
+            </div>
+            <div class="sunday">
+              <h3>3</h3>
+              <ul>
+                <li>Select report free last month</li>
+                <li>Prepare offers for dinner</li>
+              </ul>
+            </div>
+
+          </div>
+
+
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
