@@ -1,2 +1,2 @@
-# hw__calendar--app
+# hw__calendar__app
 Homework calendar app--html/css
