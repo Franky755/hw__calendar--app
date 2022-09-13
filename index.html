@@ -28,19 +28,24 @@
   <body>
     <div class="grid-container">
       <!-- header -->
-      <header>
+      <header class="">
         <div class="task-manager">TASK MANAGER</div>
-        <form class="search">
-          <label for="search-method" class="search-method"></label>
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Search..."
-            autocomplete="off"
-          />
-        </form>
-        <div class="calendar">Calendar</div>
-        <div class="toggler"><i class="fa-solid fa-ellipsis"></i></div>
+        <div class="calendar-title">
+          <form class="search">
+            <label for="search-method" class="search-method"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></label>
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search..."
+              autocomplete="on"
+              size="12vw"
+            />
+          </form>
+          <span class="cal-title">Calendar</span>
+          <i class="fa-solid fa-ellipsis fa-2x"></i>
+        </div>
       </header>
       <!-- main body -->
       <!-- summary information -->
@@ -50,8 +55,8 @@
             class="avatar"
             src="./img/avatar.jpg"
             alt="avatar"
-            width="150"
-            height="150"
+            width="80"
+            height="80"
           />
           <p class="name">Monkey D. Luffy</p>
           <p class="email">
@@ -62,43 +67,44 @@
           <i class="fa-solid fa-gear"></i>
           <i class="fa-solid fa-envelope"></i>
           <i class="fa-solid fa-bell"></i>
-        </div>
-        <!-- task summary -->
-        <div class="sum-tasks">
-          <form class="total-tasks" role="total-task" action="#">
-            <input
-              type="range"
-              id="total-tasks"
-              name="total-tasks"
-              min="1"
-              max="33"
-              step="1"
-              value="12"
-              required
-            />
-            <label for="total-tasks" class="total-tasks">12/69</label>
-          </form>
 
-          <div class="task-completed">
-            <h3>12</h3>
-            <p>
-              <strong>Completed</strong><br />
-              tasks
-            </p>
+          <!-- task summary -->
+          <div class="sum-tasks">
+            <form class="tasks-bar" role="total-task" action="#">
+              <input
+                type="range"
+                id="total-tasks"
+                name="total-tasks"
+                min="1"
+                max="33"
+                step="1"
+                value="12"
+                required
+              />
+              <label for="total-tasks" class="total-tasks">12/69</label>
+            </form>
+            <!-- task information -->
+            <div class="tasks-info">
+              <div class="task">
+                <h3>12</h3>
+                <p>
+                  <strong>Completed</strong><br />
+                  tasks
+                </p>
+              </div>
+              <div class="task">
+                <h3>22</h3>
+                <p>
+                  <strong>To do</strong><br />
+                  tasks
+                </p>
+              </div>
+              <div class="task">
+                <h3>69</h3>
+                <p><strong>Total</strong><br />tasks</p>
+              </div>
           </div>
-          <div class="task-todo">
-            <h3>22</h3>
-            <p>
-              <strong>To do</strong><br />
-              tasks
-            </p>
           </div>
-          <div class="task-total">
-            <h3>69</h3>
-            <p><strong>Total</strong><br />tasks</p>
-          </div>
-        </div>
-
         <!-- project information -->
         <div class="project">
           <h2>PROJECTS</h2>
@@ -110,52 +116,59 @@
           </ul>
         </div>
         <!-- team-info -->
-        <div class="team-list">
-          <h2>TEAM</h2>
+        <h2 class="abc">TEAM</h2>
           <div class="team-list">
             <div class="member-1">
               <img
                 src="./img/luffy.jpg"
-                width="50"
-                height="50"
+                width="30"
+                height="30"
                 alt="luffy-captain"
+                title="Luffy-captain"
               />
-            </div>
-            <div class="member-1">
-              <img src="./img/zoro.png" width="50" height="50" alt="zoro" />
-            </div>
-            <div class="member-1">
-              <img src="./img/sanji.jpg" width="50" height="50" alt="sanji" />
-            </div>
-            <div class="member-1">
-              <img src="./img/nami.jpg" width="50" height="50" alt="nami" />
-            </div>
-            <div class="member-1">
-              <img src="./img/usopp.png" width="50" height="50" alt="usopp" />
-            </div>
-            <div class="member-1">
-              <img src="./img/robin.png" width="50" height="50" alt="robin" />
-            </div>
-            <div class="member-1">
-              <img src="./img/brook.jpg" width="50" height="50" alt="brook" />
             </div>
             <div class="member-1">
               <img
-                src="./img/chopper.jpg"
-                width="50"
-                height="50"
-                alt="chopper"
+                src="./img/zoro.png"
+                width="30"
+                height="30"
+                alt="zoro"
+                title="Zoro"
               />
             </div>
             <div class="member-1">
-              <img src="./img/jinbei.jpg" width="50" height="50" alt="jinbei" />
+              <img
+                src="./img/sanji.jpg"
+                width="30"
+                height="30"
+                alt="sanji"
+                title="Sanji"
+              />
             </div>
+            <div class="member-1">
+              <img
+                src="./img/nami.jpg"
+                width="30"
+                height="30"
+                alt="nami"
+                title="Nami"
+              />
+            </div>
+            <div class="member-1">
+              <img
+                src="./img/usopp.png"
+                width="30"
+                height="30"
+                alt="usopp"
+                title="Usopp"
+              />
+            </div>
+
           </div>
-        </div>
       </section>
 
       <!-- calendar-container -->
-      <section class="calendar-section">
+      <section class="calendar-body">
         <!-- calendar navigation -->
         <nav class="nav-calendar">
           <!-- button-week-month -->
@@ -353,5 +366,8 @@
         </div>
       </section>
     </div>
+
+    <!-- javascript -->
+    <script src="./main js/main.js"></script>
   </body>
 </html>

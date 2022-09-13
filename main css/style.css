@@ -1,0 +1,304 @@
+:root{
+    --clr-dark-blue:#54a0ff;
+    --clr-light-violet:#a29bfe;
+    --clr-dark-violet:#5f27cd;
+    --clr-red:#ee5253;
+    --clr-light-red:#fab1a0;
+    --clr-orange:#ff9f43;
+    --clr-yellow:#fdcb6e;
+    --clr-gray:#dfe6e9;
+    --clr-dark-gray:#7f8fa6;
+    --clr-gray-border:#dcdde1;
+    --clr-white:#f5f6fa;
+    --smooth: all 0.3s ease-in-out;
+}
+
+html{
+    font-size:10px;
+    scroll-behavior: smooth;
+    font-family:'Roboto',sans-serif;
+}
+
+
+/* reset css */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* common styling */
+
+img{
+    max-width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+}
+
+.fa-solid, a, button:hover{
+    cursor: pointer;
+}
+
+
+.red {
+    border: 3px solid red;
+}
+.green{
+    border: 3px solid green;
+}
+
+body{
+    font-size: 1.4rem;
+    max-width: 1440px;
+    padding: 5rem 10rem;
+    background-color: var(--clr-light-violet);
+}
+/* make grid layout */
+.grid-container{
+    display: grid;
+    grid-template-columns: 3fr 11fr;
+    grid-template-rows: auto 5fr 3fr 2fr;
+    background-color: #f5f6fa;
+
+    border: 2px solid var(--clr-gray-border);
+    border-radius: 5px;
+    margin-bottom: 10rem;
+
+    height: 520px;
+
+}
+
+
+header{
+    height: 3rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/3;
+    grid-row:1/2;
+
+    text-align: center;
+    border-bottom: 4px solid #dcdde1;
+    background-color: #fff;
+}
+
+.sum-info{
+    grid-column: 1/2;
+    grid-row:2/5;
+}
+
+.calendar-body{
+    grid-column: 2/3;
+    grid-row:2/5;
+}
+
+
+/* styling header */
+.task-manager{
+    height:100%;
+    width: 180px;
+    line-height: 3rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color:var(--clr-dark-gray);
+
+    border-top-left-radius: 5px;
+    border-right: 3px solid var(--clr-gray-border);
+
+}
+
+.calendar-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 3;
+    height: 100%;
+    padding-right: 20px;
+
+    border-top-right-radius: 5px;
+}
+
+span.cal-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.cal-title{
+    width: 100%;
+}
+.search{
+    position: absolute;
+}
+
+input{
+    border: none;
+    border-radius: 4px;
+}
+
+.fa-solid{
+    width: 30px;
+}
+
+@media (max-width: 900px) {
+    .search{
+        display: none;
+    }
+    span.cal-title{
+        font-size: 1.2rem;
+    }
+    .fa-solid{
+        display: none;
+    }
+}
+
+/* Summary information */
+
+.sum-info{
+    width: 180px;
+
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position:relative;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+
+    border-right: 3px solid var(--clr-gray-border);
+
+}
+
+.avatar{
+ position: relative;
+ margin:5px 48px;
+}
+
+.name{
+    font-weight: 700;
+    margin-bottom:0.4em;
+}
+
+.email{
+    margin-bottom: 1em;
+}
+
+.sum-tasks{
+    margin: 10px;
+}
+.tasks-info{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* project-information */
+
+.project{
+    text-align: left;
+    padding: 1.5rem;
+
+    font-size: 1rem;
+    height: 160px;
+
+    border-bottom: 4px solid #dcdde1;
+    border-top: 4px solid #dcdde1;
+}
+.project h2{
+    margin-bottom: 0.8rem;
+}
+.project li a{
+    font-size: 0.9rem;
+    line-height: 2.2rem;
+    
+}
+
+.project ul li{
+    list-style-type: circle;
+    list-style-image: url('circle.gif');
+    margin-left: 12px;
+}
+
+/* team list */
+
+.team-list{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    flex-basis:content;
+
+    width: 160px;
+    height:100%;
+}
+
+.abc{
+    text-align: left;
+    margin: 1.5rem 2rem;
+}
+.team-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
