@@ -65,8 +65,10 @@ h1, h2, h3, h4, h5{
 
 body{
     font-size: 1.4rem;
-    max-width: 1440px;
-    padding: 5rem 10rem;
+    max-width: 1920px;
+    max-height: 1080px;
+    padding-left: max(10rem, 10vh);
+    margin:min(10rem, 10vh) ;
     background-color: var(--clr-light-violet);
 }
 /* make grid layout */
@@ -80,7 +82,8 @@ body{
     border-radius: 5px;
     margin-bottom: 10rem;
 
-    height: 525px;
+    height: 725px;
+    width: auto;
 
 }
 
@@ -165,6 +168,7 @@ input{
     .fa-solid{
         display: none;
     }
+
 }
 
 /* Summary information */
@@ -266,14 +270,124 @@ input{
     width: 90%;
 }
 
+/* .calendar-body */
+.calendar-body{
+    font-size: 0.8rem;
+    min-width: 90%;
+    /* margin:auto; */
+}
 
+.nav-calendar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.btn-week-month{
+    flex-grow: 1;
+    float:right;
+}
 
+.month{
+    flex-grow: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.btn-weekends{
+    flex-grow: 1;
+    float:right;
+}
 
+.btn-add-tasks{
+    flex-grow: ;
+}
 
+.nav-calendar button{
+    height: 24px;
+}
 
+.btn__week{
+    background-color: var(--clr-dark-blue);
+    color:#fff;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 15px 0 0 15px;
+    border: 2px solid var(--clr-dark-blue);
+}
 
+.btn__month{
+    background-color: #fff;
+    color:var(--clr-dark-blue);
+    padding: 5px 12px;
+    font-size: 0.8rem;
+
+    border-radius: 0 15px 15px 0;
+    border: 2px solid var(--clr-dark-blue);
+    border-left: 0 solid;
+}
+
+button.btn-weekends{
+    font-size: 1rem;
+    padding: 5px 15px;
+    color:var(--clr-dark-gray);
+    border: 2px solid var(--clr-dark-gray);
+    border-radius: 12px;
+    margin-right:20px;
+}
+
+button.btn.btn-add-tasks{
+    font-size: 1rem;
+    padding: 5px 17px;
+    background-color: var(--clr-dark-blue);
+    color:#fff;
+    border-radius: 12px;
+    border:none;
+}z
+
+.month{
+    width: 100%;
+}
+.month li{
+
+    font-size: 1.2rem;
+    display: inline-block;
+    position: relative;
+    margin:auto;
+    text-align: center;
+    align-items: center;
+}
+
+.month .btn-prev{
+    float:left;
+}
+.month .btn-next{
+    float:right;
+}
+
+/* .weekdays */
+.weekdays{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+ul.weekdays{
+    border: 1px solid #ccc;
+}
+
+/* days */
+
+.days{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
 
 
 
