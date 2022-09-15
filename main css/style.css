@@ -86,6 +86,14 @@ body{
     display: flex;
 }
 
+.main-container{
+    display: flex;
+    width: 100%;
+    -webkit-box-shadow: 0px 26px 18px -7px #6C5CE7; 
+box-shadow: 0px 26px 18px -7px #6C5CE7;
+}
+
+
 /* .left-side */
 
 .left-side{
@@ -271,7 +279,7 @@ box-shadow: 0px 0px 0px 5px var(--clr-gray-border);
 /* right-side */
 
 .right-side{
-    width: 71vw;
+    width: 90%;
     height: 750px;
 
     flex-direction: column;
@@ -513,6 +521,8 @@ button.btn.btn-add-tasks:hover{
 }
 
 
+/* media query */
+
 @media  (max-width: 1440px){
     html{
         font-size: 10px;
@@ -524,14 +534,6 @@ button.btn.btn-add-tasks:hover{
     body{
         padding-left: 2rem;
     }
-}
-
-/* boxshadow */
-
-.main-container{
-    display: flex;
-    -webkit-box-shadow: 0px 26px 18px -7px #6C5CE7; 
-box-shadow: 0px 26px 18px -7px #6C5CE7;
 }
 
 
