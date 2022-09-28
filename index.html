@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us, vi">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -218,7 +218,7 @@
 
 
         <!-- button add tasks -->
-        <button type="button" class="btn btn-add-tasks">Add task</button>
+        <button type="button" id="myBtn" class="btn btn-add-tasks modal">Add task</button>
       </nav>
       <p class="year">2022</p>
 
@@ -406,7 +406,44 @@
       </div>
       </div>
     </section>
+
+    <!-- create a modal__add task-->
+
+    <!-- the modal__add task -->
+    <div id="myModal" class="modal-addtask">
+
+      <!-- modal content -->  
+
+      <div class="modal-content"> 
+
+        <button type="button" class="modal-category btn btn-addcategory"> <i class="fa-duotone fa-plus fa-xl"></i> Category </button>
+        <span class="close">&times;</span>
+        <span class="date-indication"> 
+          <i class="fa-solid fa-calendar-days"></i>
+          23.10.2022</span>
+
+        <h3 class="title-addtask"> 
+          <i class="fa-regular fa-circle-check"></i>
+          Title of the task</h3>
+       
+          <textarea id="modal-description" name="modal-description" placeholder="Description..." style="height:120px; width:300px"></textarea>
+          <div class="addtask-container">
+          <button type="button" class="submit-btn-addtask btn">Add task</button>
+      </div>
+
+      </div>
+
+      </div>
+      
+      </div>
+
+
+    </div> 
+
+
     </div>
+
+
     <!-- javascript -->
     <script src="./main js/main.js"></script>
   </body>
