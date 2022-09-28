@@ -525,7 +525,7 @@ button.btn.btn-add-tasks:hover {
 
 /* modal container */
 .modal-addtask {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 1;
 
