@@ -9,7 +9,7 @@
     <meta name="description" content="calendar" />
     <meta author="franky" content="Calendar" />
     <!-- link to stylesheet.css -->
-    <link rel="stylesheet" href="./main css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- link to google-font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -414,9 +414,26 @@
 
       <!-- modal content -->  
 
-      <div class="modal-content"> 
+      <div class="modal-content" id="myModalContent"> 
+        <!-- add category -->
+        <div class="category-container" id="myCategory">
+          <select class="category-list" id="categoryList">
+            <option value="0">Category</option>
+            <option value="1">Meeting</option>
+            <option value="2">Party</option>
+            <option value="3">Birthday</option>
+            <option value="4">Work</option>
+            <option value="5">Note</option>
+            <option value="6">Holiday</option>
+            <option value="7">Others</option>
+          </select>
+        </div>
 
-        <button type="button" class="modal-category btn btn-addcategory"> <i class="fa-duotone fa-plus fa-xl"></i> Category </button>
+
+        <button type="button" class="modal-category btn btn-addcategory" style="display: none;"> 
+          <i class="fa-duotone fa-plus fa-xl"></i>
+          Category 
+        </button>
         <span class="close">&times;</span>
         <span class="date-indication"> 
           <i class="fa-solid fa-calendar-days"></i>
@@ -445,7 +462,7 @@
 
 
     <!-- javascript -->
-    <script src="./main js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
 

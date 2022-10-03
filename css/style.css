@@ -677,6 +677,56 @@ border-radius: 10px;
     to {top:0; opacity:1}
   }
   
+/* category styling */
+
+.category-container {
+  position:relative;
+}
+
+.category-container select{
+  display: block;
+}
+
+select{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+
+  color:#fff;
+  font-size: 1.15rem;
+
+  padding: 5px 15px;
+  height: 3rem;
+  font-weight: 600;
+  width: 120px;
+
+  border: none;
+  border-radius: 15px;
+
+  background-color: var(--clr-dark-gray);
+
+  appearance: ;
+}
+
+select option{
+  color:#fff;
+  font-size: 1.15rem;
+
+  padding: 5px 15px;
+  height: 3rem;
+  font-weight: 600;
+
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+li{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 
 
 
